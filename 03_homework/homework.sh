@@ -28,6 +28,7 @@
   ls dir2/
   ls dir3/
   ls dir4/
+  ls dir5/
   
 # 5. How would you append to one of the existing files " and machine learning!"?
   code dir1/test1.txt # change the text and save
@@ -36,9 +37,23 @@
   cat dir1/test1.txt
   
 # 7. How would you delete all files except for the one with the appended text?
+  cd dir1
+  setopt extendedglob
+  rm -- ^test1.txt 
 
 # 8. How would you navigate back to the parent directory containing all the directories?
+  cd ..
 
 # 9. How would you remove each directory along with its contents?
+  rm -r dir1
+  rm -r dir2
+  rm -r dir3
+  rm -r dir4
+  rm -r dir5
+
+  OR
+
+  rm -r *
 
 # 10. How would you verify that all directories and files have been deleted?
+  ls #to see all the directories
